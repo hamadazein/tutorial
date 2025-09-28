@@ -1,11 +1,12 @@
 
 - **Getting Started**
-  - [Pengantar](getting-started.md)
+  - [Introduction](docs/getting-started.md)
 
 - **Lessons**
-  - [HTML Basics](lessons/html.md)
-  - [CSS Basics](lessons/css.md)
-  - [JavaScript Basics](lessons/js.md)
+  - [HTML Basics](docs/lessons/html.md)
+  - [CSS Basics](docs/lessons/css.md)
+  - [JavaScript Basics](docs/lessons/js.md)
 
 - **Resources**
-  - [Repository Asli](https://github.com/microsoft/Web-Dev-For-Beginners)
+  - [GitHub Repository](https://github.com/hamadazein/tutorial)
+  - [Live Demo](https://hamadazein.github.io/tutorial)

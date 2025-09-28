@@ -11,7 +11,7 @@
 
 **Learn Web Development with Interactive Examples, Live Code Editors, and Hands-on Projects!**
 
-[🚀 Start Learning](docs/getting-started.md) • [📖 View Lessons](docs/lessons/) • [💡 Examples](https://github.com/hamadazein/tutorial/tree/main/examples) • [🤝 Contribute](CONTRIBUTING.md)
+[Start Learning](docs/getting-started.md) • [View Lessons](docs/lessons/) • [Examples](#examples) • [Contribute](#contributing)
 
 </div>
 
@@ -45,22 +45,22 @@
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
 
 <div style="border: 2px solid #4285f4; border-radius: 10px; padding: 20px; text-align: center;">
-<h4>🎨 Theme Toggle</h4>
+<h4>Theme Toggle</h4>
 <p>Switch between light and dark modes for comfortable learning</p>
 </div>
 
 <div style="border: 2px solid #34a853; border-radius: 10px; padding: 20px; text-align: center;">
-<h4>⌨️ Keyboard Shortcuts</h4>
-<p>Navigate efficiently with keyboard shortcuts (Press ⌨️ to see all)</p>
+<h4>Keyboard Shortcuts</h4>
+<p>Navigate efficiently with keyboard shortcuts</p>
 </div>
 
 <div style="border: 2px solid #ea4335; border-radius: 10px; padding: 20px; text-align: center;">
-<h4>🏆 Achievement System</h4>
+<h4>Achievement System</h4>
 <p>Unlock achievements as you progress through the tutorial</p>
 </div>
 
 <div style="border: 2px solid #fbbc05; border-radius: 10px; padding: 20px; text-align: center;">
-<h4>📱 Mobile Responsive</h4>
+<h4>Mobile Responsive</h4>
 <p>Learn on any device - desktop, tablet, or mobile</p>
 </div>
 
@@ -70,14 +70,14 @@
 
 ## 🎯 Learning Path
 
-### 🥳 **Complete Beginner?** Start Here!
+### **Complete Beginner? Start Here!**
 
-1. **📚 [Getting Started](docs/getting-started.md)** - Setup your development environment
-2. **🏗️ [HTML Fundamentals](docs/lessons/html.md)** - Learn the building blocks of web
-3. **🎨 [CSS Styling](docs/lessons/css.md)** - Make your websites beautiful
-4. **⚡ [JavaScript Interactivity](docs/lessons/js.md)** - Add dynamic behavior
+1. **[Getting Started](docs/getting-started.md)** - Setup your development environment
+2. **[HTML Fundamentals](docs/lessons/html.md)** - Learn the building blocks of web
+3. **[CSS Styling](docs/lessons/css.md)** - Make your websites beautiful
+4. **[JavaScript Interactivity](docs/lessons/js.md)** - Add dynamic behavior
 
-### 🎓 **Have Some Experience?** 
+### **Have Some Experience?** 
 
 Jump to specific topics using the navigation or search for what you need!
 
@@ -273,11 +273,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Click below to begin your interactive learning experience!**
 
 <a href="docs/getting-started.md" style="display: inline-block; background: linear-gradient(135deg, #4285f4, #34a853); color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 18px; margin: 20px; transition: transform 0.3s;">
-🎯 Start Learning Now!
+Start Learning Now!
 </a>
 
 <a href="docs/lessons/" style="display: inline-block; background: linear-gradient(135deg, #ea4335, #fbbc05); color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; font-size: 18px; margin: 20px; transition: transform 0.3s;">
-📖 Browse All Lessons
+Browse All Lessons
 </a>
 
 ---

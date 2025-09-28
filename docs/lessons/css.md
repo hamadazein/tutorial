@@ -1,4 +1,4 @@
-# 🎨 CSS - Seni Mendesain Website
+# CSS - Seni Mendesain Website
 
 CSS (Cascading Style Sheets) adalah bahasa styling yang membuat website Anda tampil menakjubkan! Mari belajar dari dasar hingga teknik modern yang digunakan oleh profesional.
 
@@ -6,7 +6,7 @@ CSS (Cascading Style Sheets) adalah bahasa styling yang membuat website Anda tam
 
 <!-- tabs:start -->
 
-#### ** 🚀 Pengenalan CSS **
+#### ** Pengenalan CSS **
 
 ### Apa itu CSS?
 
@@ -16,10 +16,10 @@ CSS adalah bahasa stylesheet yang mengontrol tampilan visual website. Jika HTML 
 
 ### Mengapa CSS Penting?
 
-- 🎨 **Visual Appeal**: Membuat website terlihat profesional
-- 📱 **Responsiveness**: Adaptasi dengan berbagai device
-- ⚡ **Performance**: Memisahkan style dari struktur
-- 🔧 **Maintainability**: Mudah diupdate dan dikelola
+- **Visual Appeal**: Membuat website terlihat profesional
+- **Responsiveness**: Adaptasi dengan berbagai device
+- **Performance**: Memisahkan style dari struktur
+- **Maintainability**: Mudah diupdate dan dikelola
 
 ### 3 Cara Menambahkan CSS
 

@@ -1,4 +1,4 @@
-# 🏗️ HTML - Fondasi Website Modern
+# HTML - Fondasi Website Modern
 
 HTML (HyperText Markup Language) adalah bahasa markup untuk membangun struktur website. Mari belajar dari dasar hingga mahir dengan pendekatan interaktif!
 
@@ -6,7 +6,7 @@ HTML (HyperText Markup Language) adalah bahasa markup untuk membangun struktur w
 
 <!-- tabs:start -->
 
-#### ** 🚀 Pengenalan **
+#### ** Pengenalan **
 
 ### Apa itu HTML?
 
@@ -16,10 +16,10 @@ HTML adalah **bahasa markup** yang digunakan untuk membuat struktur dan konten w
 
 ### Mengapa Belajar HTML?
 
-- 🌍 **Universal**: Semua website menggunakan HTML
-- 🎯 **Mudah Dipelajari**: Sintaks yang sederhana dan logis  
-- 🚀 **Dasar Wajib**: Foundation untuk CSS dan JavaScript
-- 💼 **Career Essential**: Skill wajib untuk web developer
+- **Universal**: Semua website menggunakan HTML
+- **Mudah Dipelajari**: Sintaks yang sederhana dan logis  
+- **Dasar Wajib**: Foundation untuk CSS dan JavaScript
+- **Career Essential**: Skill wajib untuk web developer
 
 ### Tools yang Dibutuhkan
 

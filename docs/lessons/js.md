@@ -1,4 +1,4 @@
-# 🚀 JavaScript - Membuat Web Interaktif
+# JavaScript - Membuat Web Interaktif
 
 JavaScript adalah bahasa pemrograman yang memberikan "nyawa" pada website Anda! Mari belajar step by step dari dasar hingga membuat aplikasi interaktif.
 
@@ -6,7 +6,7 @@ JavaScript adalah bahasa pemrograman yang memberikan "nyawa" pada website Anda! 
 
 <!-- tabs:start -->
 
-#### ** 🎯 Pengenalan **
+#### ** Pengenalan **
 
 ### Apa itu JavaScript?
 
@@ -16,10 +16,10 @@ JavaScript adalah bahasa pemrograman yang digunakan untuk membuat website menjad
 
 ### Mengapa Belajar JavaScript?
 
-- 🌐 **Universal**: Berjalan di semua browser
-- 📱 **Versatile**: Web, mobile, desktop, server
-- 🎨 **Interactive**: Membuat animasi dan efek menarik
-- 🚀 **Modern**: Teknologi yang terus berkembang
+- **Universal**: Berjalan di semua browser
+- **Versatile**: Web, mobile, desktop, server
+- **Interactive**: Membuat animasi dan efek menarik
+- **Modern**: Teknologi yang terus berkembang
 
 #### ** 📊 Variabel & Data **
 
