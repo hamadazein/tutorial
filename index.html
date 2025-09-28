@@ -2,27 +2,268 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Web Dev for Beginners</title>
+  <title>Interactive Web Dev Tutorial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css" />
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <div class="loading-wrapper">
+      <div class="loading-spinner"></div>
+      <p>Loading Interactive Tutorial...</p>
+    </div>
+  </div>
 
   <script>
     window.$docsify = {
-      name: 'Web Development for Beginners: A Curriculum',
-      repo: 'https://github.com/microsoft/Web-Dev-For-Beginners',
+      name: '🚀 Interactive Web Development Tutorial',
+      repo: 'https://github.com/hamadazein/tutorial',
+      logo: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💻</text></svg>',
       loadNavbar: 'docs/_navbar.md',
-      loadSidebar: 'docs/_sidebar.md',   // enable sidebar
+      loadSidebar: 'docs/_sidebar.md',
       relativePath: true,
       auto2top: true,
-      subMaxLevel: 2,                    // show h2-h3 in sidebar
-      notFoundPage: true
+      subMaxLevel: 3,
+      notFoundPage: true,
+      executeScript: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Cari materi...',
+        noData: 'Tidak ditemukan!',
+        depth: 4
+      },
+      copyCode: {
+        buttonText: '📋 Copy',
+        errorText: 'Error',
+        successText: '✅ Copied!'
+      },
+      pagination: {
+        previousText: '⬅️ Previous',
+        nextText: 'Next ➡️',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'material',
+        tabComments: true,
+        tabHeadings: true
+      },
+      themeable: {
+        responsiveTables: true
+      },
+      plugins: [
+        // Progress bar plugin
+        function(hook) {
+          hook.beforeEach(function(content) {
+            return `<div class="progress-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>` + content;
+          });
+          
+          hook.doneEach(function() {
+            updateProgressBar();
+            addInteractiveFeatures();
+          });
+        }
+      ]
     }
+    
+    // Progress bar functionality
+    function updateProgressBar() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const progressBar = document.getElementById('progress-bar');
+      if (progressBar) {
+        progressBar.style.width = scrolled + '%';
+      }
+    }
+    
+    // Interactive features
+    function addInteractiveFeatures() {
+      // Add copy buttons to code blocks
+      document.querySelectorAll('pre code').forEach(function(block) {
+        if (!block.parentElement.querySelector('.copy-btn')) {
+          const button = document.createElement('button');
+          button.className = 'copy-btn';
+          button.innerHTML = '📋';
+          button.title = 'Copy code';
+          button.onclick = function() {
+            navigator.clipboard.writeText(block.textContent).then(function() {
+              button.innerHTML = '✅';
+              setTimeout(() => button.innerHTML = '📋', 2000);
+            });
+          };
+          block.parentElement.style.position = 'relative';
+          block.parentElement.appendChild(button);
+        }
+      });
+      
+      // Add interactive demos
+      document.querySelectorAll('.demo-container').forEach(function(container) {
+        const code = container.querySelector('code');
+        if (code && code.classList.contains('lang-html')) {
+          const preview = document.createElement('div');
+          preview.className = 'demo-preview';
+          preview.innerHTML = code.textContent;
+          container.appendChild(preview);
+        }
+      });
+      
+      // Add tooltips to technical terms
+      const terms = {
+        'HTML': 'HyperText Markup Language - bahasa markup untuk membuat struktur web',
+        'CSS': 'Cascading Style Sheets - untuk styling dan layout',
+        'JavaScript': 'Bahasa pemrograman untuk interaktivitas web',
+        'DOM': 'Document Object Model - representasi struktur HTML'
+      };
+      
+      Object.keys(terms).forEach(term => {
+        const regex = new RegExp(`\\b${term}\\b`, 'gi');
+        document.querySelectorAll('.markdown-section p, .markdown-section li').forEach(el => {
+          if (!el.querySelector('code')) {
+            el.innerHTML = el.innerHTML.replace(regex, 
+              `<span class="tooltip" data-tooltip="${terms[term]}">${term}</span>`
+            );
+          }
+        });
+      });
+    }
+    
+    // Scroll progress
+    window.addEventListener('scroll', updateProgressBar);
   </script>
+  
+  <!-- Docsify Core -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  
+  <!-- Syntax Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  
+  <!-- Interactive Features -->
+  <script src="assets/js/interactive.js"></script>
+  
+  <!-- Confetti for celebrations -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  
+  <!-- Additional Interactive Scripts -->
+  <script>
+    // Add celebration when completing sections
+    window.celebrate = function() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    };
+    
+    // Track tutorial completion
+    window.completeSection = function(sectionName) {
+      console.log(`✅ Completed: ${sectionName}`);
+      
+      // Unlock achievement
+      if (typeof unlockAchievement !== 'undefined') {
+        unlockAchievement('speed-reader');
+      }
+      
+      // Show celebration
+      celebrate();
+      
+      // Update progress
+      const completedSections = JSON.parse(localStorage.getItem('completedSections') || '[]');
+      if (!completedSections.includes(sectionName)) {
+        completedSections.push(sectionName);
+        localStorage.setItem('completedSections', JSON.stringify(completedSections));
+      }
+    };
+    
+    // Initialize tutorial features
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add completion buttons to sections
+      document.querySelectorAll('h2, h3').forEach(heading => {
+        if (heading.textContent.includes('🏁') || heading.textContent.includes('Kesimpulan')) {
+          const completeBtn = document.createElement('button');
+          completeBtn.className = 'complete-section-btn';
+          completeBtn.innerHTML = '🎉 Complete Section';
+          completeBtn.style.cssText = `
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px 0;
+            font-weight: bold;
+            transition: all 0.3s;
+          `;
+          completeBtn.onmouseover = () => completeBtn.style.transform = 'scale(1.05)';
+          completeBtn.onmouseout = () => completeBtn.style.transform = 'scale(1)';
+          completeBtn.onclick = () => completeSection(heading.textContent);
+          
+          heading.parentNode.insertBefore(completeBtn, heading.nextSibling);
+        }
+      });
+      
+      // Add Easter egg for Konami code
+      let konamiCode = [];
+      const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+      
+      document.addEventListener('keydown', function(e) {
+        konamiCode.push(e.code);
+        if (konamiCode.length > konamiSequence.length) {
+          konamiCode.shift();
+        }
+        
+        if (konamiCode.join('') === konamiSequence.join('')) {
+          unlockSecretMode();
+          konamiCode = [];
+        }
+      });
+      
+      function unlockSecretMode() {
+        document.body.style.animation = 'rainbow 2s infinite';
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+          }
+        `;
+        document.head.appendChild(style);
+        
+        setTimeout(() => {
+          document.body.style.animation = '';
+          style.remove();
+        }, 10000);
+        
+        if (typeof unlockAchievement !== 'undefined') {
+          unlockAchievement('secret-discoverer');
+        }
+        
+        confetti({
+          particleCount: 200,
+          spread: 100,
+          origin: { y: 0.6 },
+          colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']
+        });
+      }
+    });
+  </script>
 </body>
 </html>
