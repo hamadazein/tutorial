@@ -1,1 +1,8 @@
-/* Custom style here */
+
+/* Minimal custom styles for better readability */
+:root {
+  --base-font-size: 16px;
+  --content-max-width: 880px;
+}
+.markdown-section { max-width: var(--content-max-width); }
+.app-nav a { font-weight: 600; }
